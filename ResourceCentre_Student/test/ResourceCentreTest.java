@@ -88,7 +88,12 @@ public class ResourceCentreTest {
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
+		assertEquals("cc1 should be available to be loaned", cc1.getIsAvailable(), true);
+		Boolean isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011" , "69/420/69420");
+		assertEquals("cc1 should not be available to be loaned", cc1.getIsAvailable(), false);
+		isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0033", "69/69/69420");
+		assertEquals("Asset tag cc0033 does not exist and should not be able to be loaned", isLoaned, false);
+
 	}
 	
 	@Test
