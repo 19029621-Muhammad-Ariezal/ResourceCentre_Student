@@ -85,7 +85,7 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-	public void doLoanCamcorderTest() {
+	public void doLoanCamcorderTest() { //Kenneth
 		//fail("Not yet implemented");
 		// write your code here
 		assertNotNull("Test if there is nothing in the list", camcorderList);
@@ -99,7 +99,7 @@ public class ResourceCentreTest {
 	}
 	
 	@Test
-	public void doLoanChromebookTest() {
+	public void doLoanChromebookTest() { //Kenneth
 		//fail("Not yet implemented");
 		// write your code here
 		assertNotNull("Test if there is nothing in the list", chromebookList);
@@ -109,7 +109,7 @@ public class ResourceCentreTest {
 		assertEquals("cc1 should not be available to be loaned", cb1.getIsAvailable(), false);
 		isLoaned = ResourceCentre.doLoanChromebook(chromebooklist, "CB0033", "69/69/69420");
 		assertEquals("Asset tag CB0033 does not exist and should not be able to be loaned", isLoaned, false);
-	}
+	} 
 	
 	@Test
 	public void doReturnCamcorderTest() {
